@@ -4,4 +4,4 @@ from datetime import timedelta
 
 
 DOMAIN = "sapro_bio"
-SCAN_INTERVAL = timedelta(minutes=1)
+SCAN_INTERVAL = timedelta(seconds=10)
