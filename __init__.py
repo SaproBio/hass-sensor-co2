@@ -46,7 +46,7 @@ class Api:
                 print(html)
                 data = json.loads(html)
 
-                return data[0]
+                return data
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
