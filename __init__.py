@@ -38,7 +38,9 @@ class Api:
         """Fetch data from API"""
         # session = await aiohttp.ClientSession()
 
-        async with aiohttp.ClientSession() as session:
+        connector = aiohttp.TCPConnector(force_close=True)
+
+        async with aiohttp.ClientSession(connector=connector) as session:
             async with session.get(self.host) as response:
                 html = await response.text()
                 print(html)
